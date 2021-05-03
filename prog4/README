@@ -1,0 +1,26 @@
+Message Encoder
+
+Objective: You are to write a subroutine for dealing with encoded messages using the following private-key algorithm: 
+Consider each letter of a message and of a shared key as an integer from 1 to 26 (i.e., a=1, b=2, ..., z=26). 
+The resulting letter in the encoded message is obtained by adding the letter values together and then subtracting 26 if the sum is greater than 26. 
+The key is repeated until the complete message is encoded. Spaces, digits, and punctuation are not encoded but they do count towards the repetition of the key.
+
+Decoding is the reverse process in which the value of the letter of the key is subtracted from the value of the corresponding letter in the encoded message, 
+and if the difference was zero or less, 26 would be added to the difference.
+
+Write a subroutine named "encode" with the following input parameters:
+
+r0 - address of input string
+r1 - address of output string
+r2 - address of key string
+r3 - encode/decode switch
+r3 == 0 means encode
+r3 == 1 means decode
+
+Notes:
+
+1. You may assume that all letters in the strings are lower case.
+2. In ASCII, 'a' has value 0x61, ..., 'z' has value 0x7a; thus, subtracting 0x60 from a lower case letter will give you the corresponding values of 0x01, ..., 0x1a 
+    (which is decimal 1, ..., 26).
+3. The input string and the key string will end with the null character (ASCII 0).
+4. There are no output parameters, only side effects.

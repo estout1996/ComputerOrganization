@@ -1,0 +1,21 @@
+Hardware Multiplication Algorithm
+
+Objective: To illustrate the steps required for multiplication using the algorithm discussed in class.
+
+Description:
+
+1. For this assignment you will print the steps for 8-bit by 8-bit multiplication.
+
+2. Your program should read in two unsigned numbers from stdin, the first being the multiplicand and the second being the multiplier. 
+Your program should verify that both values are within the range 0 to 255. If not, the program should print an appropriate error message and exit.
+
+3. Your program should then initialize the simulated registers and echo the input values in decimal and also in binary.
+
+4. Then your program should illustrate the eight steps required for multiplication using the same type of step diagrams as given in the lecture notes.
+
+5. Finally, your program should print a check section that shows a summary of the multiplication in binary as well as in decimal. See the example below.
+
+6. You may write your program in C, C++, or Java. If you choose to work in C, here is an example function that will allow you to represent an n-bit value 
+within an int data type and print out the binary value in "length" bits. It uses the shift right operator and the bitwise and. (You can also choose to use unsigned int as 
+the data type; since you are using only the lower 8 of the 32 bits in an int, there will be no apparent difference between using int and using unsigned int. However, if you 
+choose to use char as the data type, you should use unsigned char to ensure that the compiler generates logical rather than arithmetic shifts.)
